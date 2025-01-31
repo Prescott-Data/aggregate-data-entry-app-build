@@ -27597,69 +27597,140 @@ n.m = e, n.n = function(e) {
             }
             render() {
                 const {
-                    children: e,
+                    children: t,
                     fullscreen: n,
                     onRetry: r,
-                    loginApp: i,
-                    baseURL: o
+                    loginApp: o,
+                    baseURL: a
                 } = this.props;
-                return this.state.error ? this.props.plugin ? t.createElement(t.Fragment, null, t.createElement(ce.default, {
-                    id: Lr.__hash
-                }, Lr), t.createElement("div", {
-                    className: `jsx-${Lr.__hash} pluginBoundary`
-                }, t.createElement(Fr, null), t.createElement("div", {
-                    className: `jsx-${Lr.__hash} pluginErrorMessage`
-                }, de.A.t("There was a problem loading this plugin")), t.createElement("div", {
-                    onClick: () => {
-                        this.handleCopyErrorDetailsPlugin({
-                            error: this.state.error,
-                            errorInfo: this.state.errorInfo
-                        })
-                    },
-                    className: `jsx-${Lr.__hash} pluginErrorCopy`
-                }, de.A.t("Copy debug info to clipboard")), r && t.createElement("div", {
-                    className: `jsx-${Lr.__hash} pluginRetry`
-                }, t.createElement(Hr, {
-                    onClick: r,
-                    plugin: !0
-                }, de.A.t("Try again"))))) : t.createElement("div", {
-                    className: `jsx-${Lr.__hash} ` + (Or()("mask", {
-                        fullscreen: n
-                    }) || "")
-                }, t.createElement(ce.default, {
-                    id: Lr.__hash
-                }, Lr), t.createElement("div", {
-                    className: `jsx-${Lr.__hash} container`
-                }, t.createElement("h1", {
-                    className: `jsx-${Lr.__hash} message`
-                }, de.A.t("App is Ready")), i && o && t.createElement("div", {
-                    className: `jsx-${Lr.__hash} retry`
-                }, t.createElement(Hr, {
-                    onClick: this.handleSafeLoginRedirect
-                }, de.A.t("Redirect to safe login mode"))), r && t.createElement("div", {
-                    className: `jsx-${Lr.__hash} retry`
-                }, t.createElement(Hr, {
-                    onClick: r
-                }, de.A.t("Proceed"))), t.createElement("button", {
-                    onClick: this.toggleTechInfoDrawer,
-                    className: `jsx-${Lr.__hash} drawerToggle`
-                }, this.state.drawerOpen ? de.A.t("Hide technical details") : de.A.t("Show technical details")), t.createElement("div", {
-                    className: `jsx-${Lr.__hash} ` + (Or()("drawer", {
-                        hidden: !this.state.drawerOpen
-                    }) || "")
-                }, t.createElement("div", {
-                    className: `jsx-${Lr.__hash} errorIntro`
-                }, t.createElement("p", {
-                    className: `jsx-${Lr.__hash}`
-                }, $r), t.createElement("p", {
-                    className: `jsx-${Lr.__hash}`
-                }, de.A.t("The following information may be requested by technical support.")), t.createElement(Hr, {
-                    onClick: this.handleCopyErrorDetails
-                }, de.A.t("Copy technical details to clipboard"))), t.createElement("pre", {
-                    ref: this.errorDetailsRef,
-                    className: `jsx-${Lr.__hash} errorDetails`
-                }, `${this.state.error}\n`, this.state.error.stack, this.state.errorInfo.componentStack)))) : e
+            
+                return this.state.error ? (
+                    this.props.plugin ? (
+                        i().createElement(
+                            i().Fragment,
+                            null,
+                            i().createElement(e.default, { id: si.__hash }, si),
+                            i().createElement(
+                                "div",
+                                { className: `jsx-${si.__hash} pluginBoundary` },
+                                i().createElement(ci, null),
+                                i().createElement(
+                                    "div",
+                                    { className: `jsx-${si.__hash} pluginErrorMessage` },
+                                    ye.A.t("There was a problem loading this plugin")
+                                ),
+                                i().createElement(
+                                    "div",
+                                    {
+                                        onClick: () => {
+                                            this.handleCopyErrorDetailsPlugin({
+                                                error: this.state.error,
+                                                errorInfo: this.state.errorInfo
+                                            });
+                                        },
+                                        className: `jsx-${si.__hash} pluginErrorCopy`
+                                    },
+                                    ye.A.t("Copy debug info to clipboard")
+                                ),
+                                r &&
+                                    i().createElement(
+                                        "div",
+                                        { className: `jsx-${si.__hash} pluginRetry` },
+                                        i().createElement(
+                                            ui,
+                                            { onClick: r, plugin: !0 },
+                                            ye.A.t("Try again")
+                                        )
+                                    )
+                            )
+                        )
+                    ) : (
+                        i().createElement(
+                            "div",
+                            {
+                                className:
+                                    `jsx-${si.__hash} ` + (Ae()("mask", { fullscreen: n }) || "")
+                            },
+                            i().createElement(e.default, { id: si.__hash }, si),
+                            i().createElement(
+                                "div",
+                                { className: `jsx-${si.__hash} container` },
+                                i().createElement(
+                                    "h1",
+                                    { className: `jsx-${si.__hash} message` },
+                                    ye.A.t("App is Ready")
+                                ),
+                                o &&
+                                    a &&
+                                    i().createElement(
+                                        "div",
+                                        { className: `jsx-${si.__hash} retry` },
+                                        i().createElement(
+                                            ui,
+                                            { onClick: this.handleSafeLoginRedirect },
+                                            ye.A.t("Redirect to safe login mode")
+                                        )
+                                    ),
+                                r &&
+                                    i().createElement(
+                                        "div",
+                                        { className: `jsx-${si.__hash} retry` },
+                                        i().createElement(
+                                            ui,
+                                            { onClick: r },
+                                            ye.A.t("Proceed")
+                                        )
+                                    ),
+                                // Button with no text:
+                                i().createElement("button", {
+                                    onClick: this.toggleTechInfoDrawer,
+                                    className: `jsx-${si.__hash} drawerToggle`
+                                }),
+                                i().createElement(
+                                    "div",
+                                    {
+                                        className:
+                                            `jsx-${si.__hash} ` +
+                                            (Ae()("drawer", { hidden: !this.state.drawerOpen }) || "")
+                                    },
+                                    i().createElement(
+                                        "div",
+                                        { className: `jsx-${si.__hash} errorIntro` },
+                                        i().createElement(
+                                            "p",
+                                            { className: `jsx-${si.__hash}` },
+                                            fi
+                                        ),
+                                        i().createElement(
+                                            "p",
+                                            { className: `jsx-${si.__hash}` },
+                                            ye.A.t("The following information may be requested by technical support.")
+                                        ),
+                                        i().createElement(
+                                            ui,
+                                            { onClick: this.handleCopyErrorDetails },
+                                            ye.A.t("Copy technical details to clipboard")
+                                        )
+                                    ),
+                                    i().createElement(
+                                        "pre",
+                                        {
+                                            ref: this.errorDetailsRef,
+                                            className: `jsx-${si.__hash} errorDetails`
+                                        },
+                                        `${this.state.error}\n`,
+                                        this.state.error.stack,
+                                        this.state.errorInfo.componentStack
+                                    )
+                                )
+                            )
+                        )
+                    )
+                ) : (
+                    t
+                );
             }
+            
         }
         Ur.propTypes = {
             children: ue().node.isRequired,
